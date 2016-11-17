@@ -1,0 +1,69 @@
+//
+//  WXHMeViewController.m
+//  Best1.0
+//
+//  Created by 初七 on 2016/11/1.
+//  Copyright © 2016年 nemo. All rights reserved.
+//
+
+#import "WXHMeViewController.h"
+
+@interface WXHMeViewController ()
+
+@end
+
+@implementation WXHMeViewController
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    self.view.backgroundColor = [UIColor greenColor];
+    [self setupNavBar];
+}
+
+- (void)setupNavBar
+{
+    // 左边按钮
+    // 把UIButton包装成UIBarButtonItem.就导致按钮点击区域扩大
+    
+    // 设置
+    UIBarButtonItem *settingItem =  [UIBarButtonItem itemWithimage:[UIImage imageNamed:@"mine-setting-icon"] highImage:[UIImage imageNamed:@"mine-setting-icon-click"] target:self action:@selector(settingAction)];
+    
+    // 夜间模型
+    UIBarButtonItem *nightItem =  [UIBarButtonItem itemWithimage:[UIImage imageNamed:@"mine-moon-icon"] selImage:[UIImage imageNamed:@"mine-moon-icon-click"] target:self action:@selector(nightAction:)];
+    
+    self.navigationItem.rightBarButtonItems = @[settingItem,nightItem];
+    
+    // titleView
+    self.navigationItem.title = @"我的";
+    
+}
+
+- (void)nightAction:(UIButton *)button
+{
+    button.selected = !button.selected;
+    
+}
+
+#pragma mark - 设置就会调用
+- (void)settingAction
+{
+    // 跳转到设置界面
+    UIViewController *settingVc = [[UIViewController alloc] init];
+    settingVc.view.backgroundColor = [UIColor yellowColor];
+    [self.navigationController pushViewController:settingVc animated:YES];
+    
+}
+
+#pragma mark - Table view data source
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+#warning Incomplete implementation, return the number of sections
+    return 0;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+#warning Incomplete implementation, return the number of rows
+    return 0;
+}
+
+@end

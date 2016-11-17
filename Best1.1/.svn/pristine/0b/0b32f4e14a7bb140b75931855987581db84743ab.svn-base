@@ -1,0 +1,15 @@
+
+
+#import <UIKit/UIKit.h>
+
+@interface UIImage (Image)
+/**
+ *  保持图片不渲染
+ *
+ *  @param imageName
+ *
+ *  @return 
+ */
++ (UIImage *)imageOriginalWithName:(NSString *)imageName;
+
+@end

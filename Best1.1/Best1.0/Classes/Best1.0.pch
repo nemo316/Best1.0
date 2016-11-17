@@ -1,0 +1,47 @@
+//
+//  Best1.0.pch
+//  Best1.0
+//
+//  Created by 初七 on 2016/11/1.
+//  Copyright © 2016年 nemo. All rights reserved.
+//
+
+#import "UIView+Frame.h"
+#import "UIImage+WXHExtension.h"
+#import "UIBarButtonItem+Item.h"
+#import "WXHConst.h"
+
+// #filename -> "filename"
+// @#filename -> @"filename"
+#define WXHAFNWriteToPlist(filename) [responseObj writeToFile:[NSString stringWithFormat:@"/Users/sufeng/Desktop/%@.plist", @#filename] atomically:YES];
+/***********屏幕适配*************/
+#define kWidth [UIScreen mainScreen].bounds.size.width
+#define kHeight [UIScreen mainScreen].bounds.size.height
+#define iPhone6P (kHeight == 736)
+#define iPhone6 (kHeight == 667)
+#define iPhone5 (kHeight == 568)
+#define iPhone4 (kHeight == 480)
+/***********屏幕适配*************/
+
+#ifdef DEBUG
+#define WXHLOG(...) NSLog(__VA_ARGS__)
+#else
+#define WXHLOG(...)
+#endif
+/***********颜色*************/
+#define WXHColor(r,g,b) [UIColor colorWithRed:(r) / 256.0 green:(g) / 256.0 blue:(b) / 256.0 alpha:1]
+#define WXHGrayColor(v) WXHColor((v), (v), (v))
+#define WXHARGBColor(a, r, g, b) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:(a)/255.0]
+#define WXHGLOBALColor(r, g, b) WXHARGBColor(255, (r), (g), (b))
+#define WXHCommonBgColor WXHGrayColor(215)
+#define WXHRandomColor WXHColor(arc4random_uniform(255), arc4random_uniform(255), arc4random_uniform(255))
+// 标签的背景颜色
+#define XMGTagBgColor XMGColor(70, 142, 243)
+/***********颜色*************/
+
+#define SYSTEM_VERSION_EQUAL_TO(v)                  ([[[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] == NSOrderedSame)
+#define SYSTEM_VERSION_GREATER_THAN(v)              ([[[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] == NSOrderedDescending)
+#define SYSTEM_VERSION_GREATER_THAN_OR_EQUAL_TO(v)  ([[[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] != NSOrderedAscending)
+#define SYSTEM_VERSION_LESS_THAN(v)                 ([[[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] == NSOrderedAscending)
+#define SYSTEM_VERSION_LESS_THAN_OR_EQUAL_TO(v)     ([[[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] != NSOrderedDescending)
+

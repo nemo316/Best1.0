@@ -1,0 +1,15 @@
+
+
+#import "UIImage+Image.h"
+
+@implementation UIImage (Image)
+
++ (UIImage *)imageOriginalWithName:(NSString *)imageName
+{
+    UIImage *image = [UIImage imageNamed:imageName];
+    
+    return [image imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+
+}
+
+@end
