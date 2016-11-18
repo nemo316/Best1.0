@@ -35,6 +35,12 @@ static NSString *const ID = @"all";
     }
     return _topics;
 }
+-(AFHTTPSessionManager *)manager{
+    if (_manager == nil) {
+        _manager = [AFHTTPSessionManager manager];
+    }
+    return _manager;
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
     WXHLOG(@"%s",__func__);
@@ -55,6 +61,7 @@ static NSString *const ID = @"all";
 -(void)dealloc{
     
     [[NSNotificationCenter defaultCenter] removeObserver:self];
+    [self.manager.tasks makeObjectsPerformSelector:@selector(cancel)];
 }
 
 #pragma mark - 添加刷新控件
@@ -109,7 +116,7 @@ static NSString *const ID = @"all";
     parameters[@"a"] = @"list";
     parameters[@"c"] = @"data";
     parameters[@"type"] = @(self.type);
-    [WXHHttpTool get:WXHCommonURL params:parameters success:^(id responseObj) {
+    self.manager = [WXHHttpTool get:WXHCommonURL params:parameters success:^(id responseObj) {
         WXHAFNWriteToPlist(hot)
         // 存储maxtime
         self.maxtime = responseObj[@"info"][@"maxtime"];
@@ -139,7 +146,7 @@ static NSString *const ID = @"all";
     parameters[@"type"] = @(self.type);
     parameters[@"maxtime"] = self.maxtime;
     
-    [WXHHttpTool get:WXHCommonURL params:parameters success:^(id responseObj) {
+    self.manager = [WXHHttpTool get:WXHCommonURL params:parameters success:^(id responseObj) {
         // 存储maxtime
         self.maxtime = responseObj[@"info"][@"maxtime"];
         // 字典数组转模型数组

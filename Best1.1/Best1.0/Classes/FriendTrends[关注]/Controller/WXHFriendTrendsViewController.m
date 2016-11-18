@@ -8,6 +8,7 @@
 
 #import "WXHFriendTrendsViewController.h"
 #import "WXHLogRegistViewController.h"
+#import "WXHRecommendViewController.h"
 @interface WXHFriendTrendsViewController ()
 
 @end
@@ -36,7 +37,8 @@
 // 推荐关注
 - (void)friendsRecommentAction
 {
-    
+    WXHRecommendViewController *recommend = [[WXHRecommendViewController alloc] init];
+    [self.navigationController pushViewController:recommend animated:YES];
 }
 #pragma mark - 登录注册
 - (IBAction)logAndRegistAction:(UIButton *)sender {

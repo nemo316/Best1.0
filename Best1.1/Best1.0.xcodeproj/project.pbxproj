@@ -36,6 +36,10 @@
 		5A30625F1DD16D42000E2B33 /* WXHVideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A3062581DD16D42000E2B33 /* WXHVideoViewController.m */; };
 		5A3062601DD16D42000E2B33 /* WXHVoiceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A30625A1DD16D42000E2B33 /* WXHVoiceViewController.m */; };
 		5A3062611DD16D42000E2B33 /* WXHWordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A30625C1DD16D42000E2B33 /* WXHWordViewController.m */; };
+		5A32571A1DDE0688005C1169 /* WXHCategoryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A3257181DDE0688005C1169 /* WXHCategoryCell.m */; };
+		5A32571B1DDE0688005C1169 /* WXHCategoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5A3257191DDE0688005C1169 /* WXHCategoryCell.xib */; };
+		5A32571F1DDE069E005C1169 /* WXHSubCategoryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A32571D1DDE069E005C1169 /* WXHSubCategoryCell.m */; };
+		5A3257201DDE069E005C1169 /* WXHSubCategoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5A32571E1DDE069E005C1169 /* WXHSubCategoryCell.xib */; };
 		5A3333121DCEFB4B00AB0B3E /* WXHConst.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A3333111DCEFB4B00AB0B3E /* WXHConst.m */; };
 		5A3333151DCF007B00AB0B3E /* WXHSquareItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A3333141DCF007B00AB0B3E /* WXHSquareItem.m */; };
 		5A3333191DCF046D00AB0B3E /* WXHSquareCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A3333171DCF046D00AB0B3E /* WXHSquareCollectionViewCell.m */; };
@@ -43,6 +47,8 @@
 		5A33331E1DCF248B00AB0B3E /* WXHWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A33331C1DCF248B00AB0B3E /* WXHWebViewController.m */; };
 		5A33331F1DCF248B00AB0B3E /* WXHWebViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5A33331D1DCF248B00AB0B3E /* WXHWebViewController.xib */; };
 		5A3333211DCF252A00AB0B3E /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A3333201DCF252A00AB0B3E /* WebKit.framework */; };
+		5A6799D71DDDC81D006E3046 /* WXHRecommendViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A6799D51DDDC81D006E3046 /* WXHRecommendViewController.m */; };
+		5A6799D81DDDC81D006E3046 /* WXHRecommendViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5A6799D61DDDC81D006E3046 /* WXHRecommendViewController.xib */; };
 		5A6977D41DD5EA000081BA52 /* WXHTopic.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A6977D31DD5EA000081BA52 /* WXHTopic.m */; };
 		5A6ED0B41DD9E808003922F6 /* WXHSeeBigPictureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A6ED0B21DD9E808003922F6 /* WXHSeeBigPictureViewController.m */; };
 		5A6ED0B51DD9E808003922F6 /* WXHSeeBigPictureViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5A6ED0B31DD9E808003922F6 /* WXHSeeBigPictureViewController.xib */; };
@@ -59,6 +65,8 @@
 		5A789A891DC9F8B00007B753 /* WXHSubTagItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A789A881DC9F8B00007B753 /* WXHSubTagItem.m */; };
 		5A789A8C1DCA08600007B753 /* UIImage+Antialias.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A789A8B1DCA08600007B753 /* UIImage+Antialias.m */; };
 		5A789A8E1DCA15FB0007B753 /* WXHSubTagTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5A789A8D1DCA15FB0007B753 /* WXHSubTagTableViewCell.xib */; };
+		5A82DCAC1DDED07B006C8F1A /* WXHCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A82DCAB1DDED07B006C8F1A /* WXHCategory.m */; };
+		5A82DCAF1DDEE849006C8F1A /* WXHSubCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A82DCAE1DDEE849006C8F1A /* WXHSubCategory.m */; };
 		5A9E7B761DD022F000585C2F /* WXHFileTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A9E7B751DD022F000585C2F /* WXHFileTool.m */; };
 		5A9E7B7D1DD023A900585C2F /* WXHSettingTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A9E7B7C1DD023A900585C2F /* WXHSettingTableViewController.m */; };
 		5AB04C181DCC5FA1002E91BD /* UIImage+WXHExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AB04C171DCC5FA1002E91BD /* UIImage+WXHExtension.m */; };
@@ -165,6 +173,12 @@
 		5A30625A1DD16D42000E2B33 /* WXHVoiceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WXHVoiceViewController.m; sourceTree = "<group>"; };
 		5A30625B1DD16D42000E2B33 /* WXHWordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXHWordViewController.h; sourceTree = "<group>"; };
 		5A30625C1DD16D42000E2B33 /* WXHWordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WXHWordViewController.m; sourceTree = "<group>"; };
+		5A3257171DDE0688005C1169 /* WXHCategoryCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXHCategoryCell.h; sourceTree = "<group>"; };
+		5A3257181DDE0688005C1169 /* WXHCategoryCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WXHCategoryCell.m; sourceTree = "<group>"; };
+		5A3257191DDE0688005C1169 /* WXHCategoryCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WXHCategoryCell.xib; sourceTree = "<group>"; };
+		5A32571C1DDE069E005C1169 /* WXHSubCategoryCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXHSubCategoryCell.h; sourceTree = "<group>"; };
+		5A32571D1DDE069E005C1169 /* WXHSubCategoryCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WXHSubCategoryCell.m; sourceTree = "<group>"; };
+		5A32571E1DDE069E005C1169 /* WXHSubCategoryCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WXHSubCategoryCell.xib; sourceTree = "<group>"; };
 		5A3333101DCEFB4B00AB0B3E /* WXHConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXHConst.h; sourceTree = "<group>"; };
 		5A3333111DCEFB4B00AB0B3E /* WXHConst.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WXHConst.m; sourceTree = "<group>"; };
 		5A3333131DCF007B00AB0B3E /* WXHSquareItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXHSquareItem.h; sourceTree = "<group>"; };
@@ -176,6 +190,9 @@
 		5A33331C1DCF248B00AB0B3E /* WXHWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WXHWebViewController.m; sourceTree = "<group>"; };
 		5A33331D1DCF248B00AB0B3E /* WXHWebViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WXHWebViewController.xib; sourceTree = "<group>"; };
 		5A3333201DCF252A00AB0B3E /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
+		5A6799D41DDDC81D006E3046 /* WXHRecommendViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXHRecommendViewController.h; sourceTree = "<group>"; };
+		5A6799D51DDDC81D006E3046 /* WXHRecommendViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WXHRecommendViewController.m; sourceTree = "<group>"; };
+		5A6799D61DDDC81D006E3046 /* WXHRecommendViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WXHRecommendViewController.xib; sourceTree = "<group>"; };
 		5A6977D21DD5EA000081BA52 /* WXHTopic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXHTopic.h; sourceTree = "<group>"; };
 		5A6977D31DD5EA000081BA52 /* WXHTopic.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WXHTopic.m; sourceTree = "<group>"; };
 		5A6ED0B11DD9E808003922F6 /* WXHSeeBigPictureViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXHSeeBigPictureViewController.h; sourceTree = "<group>"; };
@@ -202,6 +219,10 @@
 		5A789A8A1DCA08600007B753 /* UIImage+Antialias.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Antialias.h"; sourceTree = "<group>"; };
 		5A789A8B1DCA08600007B753 /* UIImage+Antialias.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Antialias.m"; sourceTree = "<group>"; };
 		5A789A8D1DCA15FB0007B753 /* WXHSubTagTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WXHSubTagTableViewCell.xib; sourceTree = "<group>"; };
+		5A82DCAA1DDED07B006C8F1A /* WXHCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXHCategory.h; sourceTree = "<group>"; };
+		5A82DCAB1DDED07B006C8F1A /* WXHCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WXHCategory.m; sourceTree = "<group>"; };
+		5A82DCAD1DDEE849006C8F1A /* WXHSubCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXHSubCategory.h; sourceTree = "<group>"; };
+		5A82DCAE1DDEE849006C8F1A /* WXHSubCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WXHSubCategory.m; sourceTree = "<group>"; };
 		5A9E7B741DD022F000585C2F /* WXHFileTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXHFileTool.h; sourceTree = "<group>"; };
 		5A9E7B751DD022F000585C2F /* WXHFileTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WXHFileTool.m; sourceTree = "<group>"; };
 		5A9E7B7B1DD023A900585C2F /* WXHSettingTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXHSettingTableViewController.h; sourceTree = "<group>"; };
@@ -393,6 +414,9 @@
 				5AB04C1B1DCC727D002E91BD /* WXHLogRegistViewController.h */,
 				5AB04C1C1DCC727D002E91BD /* WXHLogRegistViewController.m */,
 				5AB04C1D1DCC727D002E91BD /* WXHLogRegistViewController.xib */,
+				5A6799D41DDDC81D006E3046 /* WXHRecommendViewController.h */,
+				5A6799D51DDDC81D006E3046 /* WXHRecommendViewController.m */,
+				5A6799D61DDDC81D006E3046 /* WXHRecommendViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -400,6 +424,10 @@
 		5A04D37A1DC86EED006E5CAA /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				5A82DCAA1DDED07B006C8F1A /* WXHCategory.h */,
+				5A82DCAB1DDED07B006C8F1A /* WXHCategory.m */,
+				5A82DCAD1DDEE849006C8F1A /* WXHSubCategory.h */,
+				5A82DCAE1DDEE849006C8F1A /* WXHSubCategory.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -417,6 +445,12 @@
 				5AB04C2B1DCC85EC002E91BD /* WXHFastLogButton.m */,
 				5AB04C301DCC9609002E91BD /* WXHTintTextField.h */,
 				5AB04C311DCC9609002E91BD /* WXHTintTextField.m */,
+				5A3257171DDE0688005C1169 /* WXHCategoryCell.h */,
+				5A3257181DDE0688005C1169 /* WXHCategoryCell.m */,
+				5A3257191DDE0688005C1169 /* WXHCategoryCell.xib */,
+				5A32571C1DDE069E005C1169 /* WXHSubCategoryCell.h */,
+				5A32571D1DDE069E005C1169 /* WXHSubCategoryCell.m */,
+				5A32571E1DDE069E005C1169 /* WXHSubCategoryCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -931,6 +965,8 @@
 				5A76E0101DD8761C00AD816B /* WXHTopicVoiceView.xib in Resources */,
 				5AD98F8E1DC8E41B00F6B041 /* LaunchImage@2x.png in Resources */,
 				5A76E00E1DD8761600AD816B /* WXHTopicVideoView.xib in Resources */,
+				5A6799D81DDDC81D006E3046 /* WXHRecommendViewController.xib in Resources */,
+				5A32571B1DDE0688005C1169 /* WXHCategoryCell.xib in Resources */,
 				5A33331F1DCF248B00AB0B3E /* WXHWebViewController.xib in Resources */,
 				5AB04C1A1DCC6EA1002E91BD /* WXHFriendTrendsViewController.xib in Resources */,
 				5AD98F701DC8D71A00F6B041 /* WXHAddViewController.xib in Resources */,
@@ -941,6 +977,7 @@
 				5A76E00C1DD8760F00AD816B /* WXHTopicPictureView.xib in Resources */,
 				5A6ED0B51DD9E808003922F6 /* WXHSeeBigPictureViewController.xib in Resources */,
 				5A76E0041DD875D700AD816B /* WXHTopicCell.xib in Resources */,
+				5A3257201DDE069E005C1169 /* WXHSubCategoryCell.xib in Resources */,
 				5AD98F891DC8E41B00F6B041 /* LaunchImage-700-568h@2x.png in Resources */,
 				5A04D34D1DC86ED6006E5CAA /* Assets.xcassets in Resources */,
 				5AB04C291DCC7FC5002E91BD /* WXHFastLoginView.xib in Resources */,
@@ -1032,17 +1069,20 @@
 				5A6ED0B41DD9E808003922F6 /* WXHSeeBigPictureViewController.m in Sources */,
 				5A6977D41DD5EA000081BA52 /* WXHTopic.m in Sources */,
 				5AD98F921DC8E59000F6B041 /* WXHHttpTool.m in Sources */,
+				5A82DCAC1DDED07B006C8F1A /* WXHCategory.m in Sources */,
 				5A04D3A21DC86F70006E5CAA /* WXHRootViewController.m in Sources */,
 				5A04D3A61DC87250006E5CAA /* WXHEssenceViewController.m in Sources */,
 				5A3333191DCF046D00AB0B3E /* WXHSquareCollectionViewCell.m in Sources */,
 				5AB04C321DCC9609002E91BD /* WXHTintTextField.m in Sources */,
 				5AD98F6B1DC8D62C00F6B041 /* AppDelegate.m in Sources */,
 				5A9E7B761DD022F000585C2F /* WXHFileTool.m in Sources */,
+				5A82DCAF1DDEE849006C8F1A /* WXHSubCategory.m in Sources */,
 				5A14BEDB1DDC5426007E2B56 /* WXHRefreshFooter.m in Sources */,
 				5AB04C271DCC7FBB002E91BD /* WXHFastLoginView.m in Sources */,
 				5A27DE631DC99BA900DA5C6A /* WXHADItem.m in Sources */,
 				5A27DE661DC9A9CA00DA5C6A /* UIImageView+load.m in Sources */,
 				5A04D3A31DC86F70006E5CAA /* WXHSaveTool.m in Sources */,
+				5A32571F1DDE069E005C1169 /* WXHSubCategoryCell.m in Sources */,
 				5A04D3971DC86EED006E5CAA /* WXHMainTabBarController.m in Sources */,
 				5A04D3421DC86ED6006E5CAA /* main.m in Sources */,
 				5A04D3AC1DC8728E006E5CAA /* WXHFriendTrendsViewController.m in Sources */,
@@ -1057,6 +1097,7 @@
 				5A30625D1DD16D42000E2B33 /* WXHAllViewController.m in Sources */,
 				5A789A811DC9F0DC0007B753 /* WXHSubTagTableViewController.m in Sources */,
 				5A9E7B7D1DD023A900585C2F /* WXHSettingTableViewController.m in Sources */,
+				5A32571A1DDE0688005C1169 /* WXHCategoryCell.m in Sources */,
 				5A789A8C1DCA08600007B753 /* UIImage+Antialias.m in Sources */,
 				5A04D3991DC86EED006E5CAA /* WXHNewFeatureViewController.m in Sources */,
 				5A33331E1DCF248B00AB0B3E /* WXHWebViewController.m in Sources */,
@@ -1068,6 +1109,7 @@
 				5A04D3B21DC87514006E5CAA /* WXHTabBar.m in Sources */,
 				5AB04C2C1DCC85EC002E91BD /* WXHFastLogButton.m in Sources */,
 				5A04D3AF1DC873ED006E5CAA /* WXHMeViewController.m in Sources */,
+				5A6799D71DDDC81D006E3046 /* WXHRecommendViewController.m in Sources */,
 				5A30625E1DD16D42000E2B33 /* WXHPictureViewController.m in Sources */,
 				5A789A851DC9F1320007B753 /* WXHSubTagTableViewCell.m in Sources */,
 				5A3333151DCF007B00AB0B3E /* WXHSquareItem.m in Sources */,

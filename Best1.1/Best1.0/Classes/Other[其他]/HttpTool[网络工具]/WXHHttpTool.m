@@ -4,8 +4,8 @@
 
 #import "WXHHttpTool.h"
 
-
 @implementation WXHHttpTool
+
 +(AFHTTPSessionManager *)get:(NSString *)url params:(NSDictionary *)params success:(void (^)(id))success failure:(void (^)(NSError *))failure
 {
     //1.获得请求管理者

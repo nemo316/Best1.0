@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11542" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="WXHRecommendViewController">
+            <connections>
+                <outlet property="categoryTableView" destination="8pI-jo-qGC" id="W8B-LU-WYT"/>
+                <outlet property="subCategoryTableView" destination="83K-Pf-OTg" id="8aE-sg-U9v"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="8pI-jo-qGC" userLabel="category">
+                    <rect key="frame" x="0.0" y="0.0" width="80" height="667"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="80" id="I1e-Ah-2Jf"/>
+                    </constraints>
+                    <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="5jB-ON-xW5"/>
+                        <outlet property="delegate" destination="-1" id="NZA-BU-mxz"/>
+                    </connections>
+                </tableView>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="83K-Pf-OTg" userLabel="subCategory">
+                    <rect key="frame" x="80" y="0.0" width="295" height="667"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="be3-ys-h52"/>
+                        <outlet property="delegate" destination="-1" id="4IP-Nn-F0B"/>
+                    </connections>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="83K-Pf-OTg" secondAttribute="bottom" id="Qu9-ye-qE2"/>
+                <constraint firstAttribute="trailing" secondItem="83K-Pf-OTg" secondAttribute="trailing" id="UUG-ZO-u73"/>
+                <constraint firstAttribute="bottom" secondItem="8pI-jo-qGC" secondAttribute="bottom" id="WAQ-MB-ZyN"/>
+                <constraint firstItem="8pI-jo-qGC" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="hUN-QL-F7h"/>
+                <constraint firstItem="8pI-jo-qGC" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="sce-Ns-Ohf"/>
+                <constraint firstItem="83K-Pf-OTg" firstAttribute="leading" secondItem="8pI-jo-qGC" secondAttribute="trailing" id="tMo-CE-qQI"/>
+                <constraint firstItem="83K-Pf-OTg" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="zhA-Cn-lRc"/>
+            </constraints>
+        </view>
+    </objects>
+</document>
