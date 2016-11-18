@@ -98,6 +98,8 @@ static NSString *const subCategoryID = @"subCategory";
 #pragma mark - 加载新数据
 -(void)loadNewDate{
     
+    // 取消所有请求
+    [self.manager.tasks makeObjectsPerformSelector:@selector(cancel)];
     WXHCategory *category = WXHSelectedCategory;
     // 当前页码为1
     category.currentPage = 1;
@@ -106,14 +108,14 @@ static NSString *const subCategoryID = @"subCategory";
     params[@"c"] = @"subscribe";
     params[@"category_id"] = @(category.id);
     params[@"page"] = @(category.currentPage);
-    self.params = params;
+//    self.params = params;
     // 发送请求给服务器, 加载右侧的数据
     self.manager = [WXHHttpTool get:WXHCommonURL params:params success:^(id responseObj) {
         category.subCategories = [WXHSubCategory mj_objectArrayWithKeyValuesArray:responseObj[@"list"]];
         // 获取总条数
         category.total = [responseObj[@"total"] integerValue];
         // 不是最后一次请求
-        if(self.params != params) return;
+//        if(self.params != params) return;
         // 刷新右边的表格
         [self.subCategoryTableView reloadData];
         // 结束刷新
@@ -131,6 +133,8 @@ static NSString *const subCategoryID = @"subCategory";
 }
 #pragma mark - 加载更多数据
 -(void)loadMoreDate{
+    // 取消所有请求
+    [self.manager.tasks makeObjectsPerformSelector:@selector(cancel)];
     WXHCategory *category = WXHSelectedCategory;
 
     NSMutableDictionary *params = [NSMutableDictionary dictionary];
@@ -138,13 +142,13 @@ static NSString *const subCategoryID = @"subCategory";
     params[@"c"] = @"subscribe";
     params[@"category_id"] = @(category.id);
     params[@"page"] = @(++category.currentPage);
-    self.params = params;
+//    self.params = params;
     // 发送请求给服务器, 加载右侧的数据
     self.manager = [WXHHttpTool get:WXHCommonURL params:params success:^(id responseObj) {
         NSArray *array = [WXHSubCategory mj_objectArrayWithKeyValuesArray:responseObj[@"list"]];
         [category.subCategories addObjectsFromArray:array];
         // 不是最后一次请求
-        if(self.params != params) return;
+//        if(self.params != params) return;
         // 刷新右边的表格
         [self.subCategoryTableView reloadData];
         // 结束刷新
