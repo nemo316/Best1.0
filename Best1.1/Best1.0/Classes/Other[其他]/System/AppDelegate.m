@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import "WXHRootViewController.h"
 #import "XJYSessionManager.h"
+#import "WXHPushGuideView.h"
 @interface AppDelegate ()
 
 @end
@@ -20,6 +21,9 @@
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     self.window.rootViewController = [WXHRootViewController chooseRootVC];
     [self.window makeKeyAndVisible];
+    
+    // 推送引导
+    [WXHPushGuideView show];
     //开始监控
     [[XJYSessionManager shareInstance].reachabilityManager startMonitoring];
     return YES;

@@ -16,7 +16,6 @@
     
     
 }
-
 #define WXHVersion @"version"
 +(UIViewController *)chooseRootVC{
 
@@ -28,6 +27,7 @@
     if ([currentVersion isEqualToString:oldVersion]) {
         vC = [[WXHAddViewController alloc] init];
     }else{
+        // 推送引导
         vC = [[WXHNewFeatureViewController alloc] init];
         
         //保存当前version

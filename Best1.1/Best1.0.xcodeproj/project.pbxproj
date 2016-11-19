@@ -79,6 +79,8 @@
 		5AB04C291DCC7FC5002E91BD /* WXHFastLoginView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5AB04C281DCC7FC5002E91BD /* WXHFastLoginView.xib */; };
 		5AB04C2C1DCC85EC002E91BD /* WXHFastLogButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AB04C2B1DCC85EC002E91BD /* WXHFastLogButton.m */; };
 		5AB04C321DCC9609002E91BD /* WXHTintTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AB04C311DCC9609002E91BD /* WXHTintTextField.m */; };
+		5ABAEDD21DE07F7A003780D2 /* WXHPushGuideView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ABAEDD11DE07F7A003780D2 /* WXHPushGuideView.m */; };
+		5ABAEDD41DE07F95003780D2 /* WXHPushGuideView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5ABAEDD31DE07F95003780D2 /* WXHPushGuideView.xib */; };
 		5AC949361DD8ABBB000431D5 /* XJYSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AC949351DD8ABBB000431D5 /* XJYSessionManager.m */; };
 		5AD98F6B1DC8D62C00F6B041 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AD98F6A1DC8D62C00F6B041 /* AppDelegate.m */; };
 		5AD98F6F1DC8D71A00F6B041 /* WXHAddViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AD98F6D1DC8D71A00F6B041 /* WXHAddViewController.m */; };
@@ -116,7 +118,7 @@
 		56A2C9004AAA4003F4EE8C28 /* Pods-Best1.0.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Best1.0.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Best1.0/Pods-Best1.0.debug.xcconfig"; sourceTree = "<group>"; };
 		5A04D33D1DC86ED6006E5CAA /* Best1.0.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Best1.0.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A04D3411DC86ED6006E5CAA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		5A04D34C1DC86ED6006E5CAA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ../../../Assets.xcassets; sourceTree = "<group>"; };
+		5A04D34C1DC86ED6006E5CAA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5A04D3511DC86ED6006E5CAA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = ../../../Info.plist; sourceTree = "<group>"; };
 		5A04D3561DC86ED6006E5CAA /* Best1.0Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Best1.0Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A04D35A1DC86ED6006E5CAA /* Best1_0Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Best1_0Tests.m; sourceTree = "<group>"; };
@@ -244,6 +246,9 @@
 		5AB04C301DCC9609002E91BD /* WXHTintTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXHTintTextField.h; sourceTree = "<group>"; };
 		5AB04C311DCC9609002E91BD /* WXHTintTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WXHTintTextField.m; sourceTree = "<group>"; };
 		5AB6C4081DC87D84002F5C30 /* Best1.0.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Best1.0.pch; path = ../Best1.0.pch; sourceTree = "<group>"; };
+		5ABAEDD01DE07F7A003780D2 /* WXHPushGuideView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXHPushGuideView.h; sourceTree = "<group>"; };
+		5ABAEDD11DE07F7A003780D2 /* WXHPushGuideView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WXHPushGuideView.m; sourceTree = "<group>"; };
+		5ABAEDD31DE07F95003780D2 /* WXHPushGuideView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WXHPushGuideView.xib; sourceTree = "<group>"; };
 		5AC949341DD8ABBB000431D5 /* XJYSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XJYSessionManager.h; sourceTree = "<group>"; };
 		5AC949351DD8ABBB000431D5 /* XJYSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XJYSessionManager.m; sourceTree = "<group>"; };
 		5AD98F691DC8D62C00F6B041 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -324,6 +329,7 @@
 		5A04D3401DC86ED6006E5CAA /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				5A04D34C1DC86ED6006E5CAA /* Assets.xcassets */,
 				5A04D3411DC86ED6006E5CAA /* main.m */,
 			);
 			name = "Supporting Files";
@@ -648,6 +654,7 @@
 		5A04D39C1DC86F70006E5CAA /* RootVC[选择根控制器] */ = {
 			isa = PBXGroup;
 			children = (
+				5ABAEDCF1DE07EC9003780D2 /* PushGuideView[推送引导] */,
 				5A04D39D1DC86F70006E5CAA /* WXHRootViewController.h */,
 				5A04D39E1DC86F70006E5CAA /* WXHRootViewController.m */,
 			);
@@ -766,6 +773,16 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		5ABAEDCF1DE07EC9003780D2 /* PushGuideView[推送引导] */ = {
+			isa = PBXGroup;
+			children = (
+				5ABAEDD01DE07F7A003780D2 /* WXHPushGuideView.h */,
+				5ABAEDD11DE07F7A003780D2 /* WXHPushGuideView.m */,
+				5ABAEDD31DE07F95003780D2 /* WXHPushGuideView.xib */,
+			);
+			name = "PushGuideView[推送引导]";
+			sourceTree = "<group>";
+		};
 		5AD98F641DC8D5C000F6B041 /* ADD[广告] */ = {
 			isa = PBXGroup;
 			children = (
@@ -807,7 +824,6 @@
 			children = (
 				5AD98F691DC8D62C00F6B041 /* AppDelegate.h */,
 				5AD98F6A1DC8D62C00F6B041 /* AppDelegate.m */,
-				5A04D34C1DC86ED6006E5CAA /* Assets.xcassets */,
 				5A04D3511DC86ED6006E5CAA /* Info.plist */,
 			);
 			path = System;
@@ -962,6 +978,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5AD98F8D1DC8E41B00F6B041 /* LaunchImage.png in Resources */,
+				5ABAEDD41DE07F95003780D2 /* WXHPushGuideView.xib in Resources */,
 				5A76E0101DD8761C00AD816B /* WXHTopicVoiceView.xib in Resources */,
 				5AD98F8E1DC8E41B00F6B041 /* LaunchImage@2x.png in Resources */,
 				5A76E00E1DD8761600AD816B /* WXHTopicVideoView.xib in Resources */,
@@ -1072,6 +1089,7 @@
 				5A82DCAC1DDED07B006C8F1A /* WXHCategory.m in Sources */,
 				5A04D3A21DC86F70006E5CAA /* WXHRootViewController.m in Sources */,
 				5A04D3A61DC87250006E5CAA /* WXHEssenceViewController.m in Sources */,
+				5ABAEDD21DE07F7A003780D2 /* WXHPushGuideView.m in Sources */,
 				5A3333191DCF046D00AB0B3E /* WXHSquareCollectionViewCell.m in Sources */,
 				5AB04C321DCC9609002E91BD /* WXHTintTextField.m in Sources */,
 				5AD98F6B1DC8D62C00F6B041 /* AppDelegate.m in Sources */,
