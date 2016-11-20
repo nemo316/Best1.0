@@ -47,6 +47,7 @@
 		5A33331E1DCF248B00AB0B3E /* WXHWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A33331C1DCF248B00AB0B3E /* WXHWebViewController.m */; };
 		5A33331F1DCF248B00AB0B3E /* WXHWebViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5A33331D1DCF248B00AB0B3E /* WXHWebViewController.xib */; };
 		5A3333211DCF252A00AB0B3E /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A3333201DCF252A00AB0B3E /* WebKit.framework */; };
+		5A534C5D1DE1A8EF0053C3D6 /* NSDate+WXHExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A534C5C1DE1A8EF0053C3D6 /* NSDate+WXHExtension.m */; };
 		5A6799D71DDDC81D006E3046 /* WXHRecommendViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A6799D51DDDC81D006E3046 /* WXHRecommendViewController.m */; };
 		5A6799D81DDDC81D006E3046 /* WXHRecommendViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5A6799D61DDDC81D006E3046 /* WXHRecommendViewController.xib */; };
 		5A6977D41DD5EA000081BA52 /* WXHTopic.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A6977D31DD5EA000081BA52 /* WXHTopic.m */; };
@@ -192,6 +193,8 @@
 		5A33331C1DCF248B00AB0B3E /* WXHWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WXHWebViewController.m; sourceTree = "<group>"; };
 		5A33331D1DCF248B00AB0B3E /* WXHWebViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WXHWebViewController.xib; sourceTree = "<group>"; };
 		5A3333201DCF252A00AB0B3E /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
+		5A534C5B1DE1A8EF0053C3D6 /* NSDate+WXHExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+WXHExtension.h"; sourceTree = "<group>"; };
+		5A534C5C1DE1A8EF0053C3D6 /* NSDate+WXHExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+WXHExtension.m"; sourceTree = "<group>"; };
 		5A6799D41DDDC81D006E3046 /* WXHRecommendViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXHRecommendViewController.h; sourceTree = "<group>"; };
 		5A6799D51DDDC81D006E3046 /* WXHRecommendViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WXHRecommendViewController.m; sourceTree = "<group>"; };
 		5A6799D61DDDC81D006E3046 /* WXHRecommendViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WXHRecommendViewController.xib; sourceTree = "<group>"; };
@@ -635,6 +638,8 @@
 		5A04D3951DC86EED006E5CAA /* Catgory */ = {
 			isa = PBXGroup;
 			children = (
+				5A534C5B1DE1A8EF0053C3D6 /* NSDate+WXHExtension.h */,
+				5A534C5C1DE1A8EF0053C3D6 /* NSDate+WXHExtension.m */,
 				5A789A8A1DCA08600007B753 /* UIImage+Antialias.h */,
 				5A789A8B1DCA08600007B753 /* UIImage+Antialias.m */,
 				5A27DE671DC9EF3E00DA5C6A /* MBProgressHUD+WXH.h */,
@@ -1124,6 +1129,7 @@
 				5A04D3981DC86EED006E5CAA /* WXHMainNavigationController.m in Sources */,
 				5A04D3B81DC879F7006E5CAA /* UIView+Frame.m in Sources */,
 				5AB04C1E1DCC727D002E91BD /* WXHLogRegistViewController.m in Sources */,
+				5A534C5D1DE1A8EF0053C3D6 /* NSDate+WXHExtension.m in Sources */,
 				5A04D3B21DC87514006E5CAA /* WXHTabBar.m in Sources */,
 				5AB04C2C1DCC85EC002E91BD /* WXHFastLogButton.m in Sources */,
 				5A04D3AF1DC873ED006E5CAA /* WXHMeViewController.m in Sources */,

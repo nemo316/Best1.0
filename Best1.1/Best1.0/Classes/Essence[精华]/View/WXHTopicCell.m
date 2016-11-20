@@ -161,5 +161,15 @@
         self.middlePicture.frame = self.topic.frame;
     }
 }
-
+-(void)convertDate:(NSString *)date{
+    
+    // 当前时间
+    NSDate *nowDate = [NSDate date];
+    // 发帖时间
+        // 设置日期格式
+    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+    formatter.dateFormat = @"yyyy-MM-dd HH:mm:ss";
+    NSDate *passTime = [formatter dateFromString:date];
+    NSTimeInterval timeInterval = [nowDate timeIntervalSinceDate:passTime];
+}
 @end
