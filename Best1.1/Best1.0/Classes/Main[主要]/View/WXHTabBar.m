@@ -7,6 +7,7 @@
 //
 
 #import "WXHTabBar.h"
+#import "WXHPublishViewController.h"
 @interface WXHTabBar()
 /** pubBtn*/
 @property(nonatomic,weak) UIButton *pubBtn;
@@ -24,6 +25,7 @@
         [pubBtn setImage:[UIImage imageNamed:@"tabBar_publish_click_icon"] forState:UIControlStateHighlighted];
         [pubBtn sizeToFit];
         [self addSubview:pubBtn];
+        [pubBtn addTarget:self action:@selector(publishAction) forControlEvents:UIControlEventTouchUpInside];
         self.pubBtn = pubBtn;
     }
     return self;
@@ -70,5 +72,10 @@
     }
     self.previousClickTabBarBtn = btn;
 }
+#pragma mark - 监听发布按钮的点击
+-(void)publishAction{
+    WXHPublishViewController *pubVC = [[WXHPublishViewController alloc] init];
+    [[UIApplication sharedApplication].keyWindow.rootViewController presentViewController:pubVC animated:NO completion:nil];
 
+}
 @end

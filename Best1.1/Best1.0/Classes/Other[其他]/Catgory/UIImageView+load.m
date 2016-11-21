@@ -69,6 +69,42 @@
     }
     
 }
+#pragma mark - 不同网络下设置图片(带进度)
+-(void)wxh_setOriginalImageWithURL:(NSString *)originalImageURL thumbnailImageWithURL:(NSString *)thumbnailImageURL placehoder:(UIImage *)placeholder progress:(SDWebImageDownloaderProgressBlock)progressBlock completed:(SDWebImageCompletionBlock)completionBlock{
+    
+    // 根据网络状态来加载图片
+    AFNetworkReachabilityManager *mgr = [AFNetworkReachabilityManager sharedManager];
+    // 获得原图（SDWebImage的图片缓存是用图片的url字符串作为key）
+    UIImage *originImage = [[SDImageCache sharedImageCache] imageFromDiskCacheForKey:originalImageURL];
+    if (originImage) { // 原图已经被下载过
+        [self sd_setImageWithURL:[NSURL URLWithString:originalImageURL] placeholderImage:placeholder completed:completionBlock];
+        
+    } else { // 原图并未下载过
+        if (mgr.isReachableViaWiFi) {
+            [self sd_setImageWithURL:[NSURL URLWithString:originalImageURL] placeholderImage:placeholder options:0 progress:progressBlock completed:completionBlock];
+            
+        } else if (mgr.isReachableViaWWAN) {
+#warning downloadOriginImageWhen3GOr4G配置项的值需要从沙盒里面获取
+            // 3G\4G网络下时候要下载原图
+            BOOL downloadOriginImageWhen3GOr4G = YES;
+            if (downloadOriginImageWhen3GOr4G) {
+                [self sd_setImageWithURL:[NSURL URLWithString:originalImageURL] placeholderImage:placeholder options:0 progress:progressBlock completed:completionBlock];
+            } else {
+                [self sd_setImageWithURL:[NSURL URLWithString:thumbnailImageURL] placeholderImage:placeholder options:0 progress:progressBlock completed:completionBlock];
+            }
+        } else { // 没有可用网络
+            UIImage *thumbnailImage = [[SDImageCache sharedImageCache] imageFromDiskCacheForKey:thumbnailImageURL];
+            if (thumbnailImage) { // 缩略图已经被下载过
+                [self sd_setImageWithURL:[NSURL URLWithString:thumbnailImageURL] placeholderImage:placeholder completed:completionBlock];            } else { // 没有下载过任何图片
+                    // 占位图片;
+                    [self sd_setImageWithURL:nil placeholderImage:placeholder options:0 progress:progressBlock completed:completionBlock];
+                }
+            
+        }
+    }
+    
+}
+
 #pragma mark - 设置头像
 - (void)wxh_setHeader:(NSString *)headerUrl
 {

@@ -42,7 +42,16 @@ typedef void (^DownloadProgressBlock) (CGFloat progress);
  *  @param placeholder       占位图
  */
 - (void)wxh_setOriginalImageWithURL:(NSString *)originalImageURL thumbnailImageWithURL:(NSString *)thumbnailImageURL placehoder:(UIImage *)placeholder completed:(SDWebImageCompletionBlock)completionBlock;
-
+/**
+ *  不同网络连接下设置图片(带进度)
+ *
+ *  @param originalImageURL  大图
+ *  @param thumbnailImageURL 小图
+ *  @param placeholder       占位图
+ *  @param progressBlock     进度
+ *  @param completionBlock   
+ */
+-(void)wxh_setOriginalImageWithURL:(NSString *)originalImageURL thumbnailImageWithURL:(NSString *)thumbnailImageURL placehoder:(UIImage *)placeholder progress:(SDWebImageDownloaderProgressBlock)progressBlock completed:(SDWebImageCompletionBlock)completionBlock;
 /**
  *  设置头像
  *

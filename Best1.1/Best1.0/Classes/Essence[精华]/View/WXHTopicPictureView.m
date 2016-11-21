@@ -10,11 +10,14 @@
 #import "WXHTopic.h"
 #import "UIImageView+load.h"
 #import "WXHSeeBigPictureViewController.h"
+#import "WXHProgressView.h"
 @interface WXHTopicPictureView()
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
 @property (weak, nonatomic) IBOutlet UIImageView *placeholderImageView;
 @property (weak, nonatomic) IBOutlet UIImageView *gifView;
 @property (weak, nonatomic) IBOutlet UIButton *seeBigPictureButton;
+@property (weak, nonatomic) IBOutlet WXHProgressView *progressView;
+
 @end
 @implementation WXHTopicPictureView
 
@@ -37,9 +40,17 @@
 -(void)setTopic:(WXHTopic *)topic{
     _topic = topic;
     
-    self.placeholderImageView.hidden = NO;
+//    self.placeholderImageView.hidden = NO;
+    // 立马显示最新的进度值(防止因为网速慢, 导致显示的是其他图片的下载进度)
+    [self.progressView setProgress:topic.pictureProgress animated:NO];
     // 设置图片
-    [self.imageView wxh_setOriginalImageWithURL:topic.image1 thumbnailImageWithURL:topic.image1 placehoder:nil completed:^(UIImage * _Nullable image, NSError * _Nullable error, SDImageCacheType cacheType, NSURL * _Nullable imageURL) {
+    [self.imageView wxh_setOriginalImageWithURL:topic.image1 thumbnailImageWithURL:topic.image1 placehoder:nil progress:^(NSInteger receivedSize, NSInteger expectedSize) {
+        self.progressView.hidden = NO;
+        // 占位图进度
+        topic.pictureProgress = receivedSize / expectedSize;
+        [self.progressView setProgress:topic.pictureProgress animated:YES];
+    } completed:^(UIImage * _Nullable image, NSError * _Nullable error, SDImageCacheType cacheType, NSURL * _Nullable imageURL) {
+        self.progressView.hidden = YES;
         // 如果么有返回图片,直接return
         if (!image) return;
         self.placeholderImageView.hidden = YES;

@@ -83,4 +83,6 @@ typedef NS_ENUM(NSUInteger, WXHTopicType){
 @property(nonatomic, assign) CGRect frame;
 /** 是否为超长图片 */
 @property (nonatomic, assign, getter=isBigPicture) BOOL bigPicture;
+/** 图片的下载进度 */
+@property (nonatomic, assign) CGFloat pictureProgress;
 @end
