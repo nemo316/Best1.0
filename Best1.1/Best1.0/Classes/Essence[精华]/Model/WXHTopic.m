@@ -2,7 +2,7 @@
 //  XMGTopic.h
 //  BuDeJie
 //
-//  Created by nemo on 16/3/22.
+//  passTimed by nemo on 16/3/22.
 //  Copyright © 2016年 初七. All rights reserved.
 //
 
@@ -50,5 +50,38 @@
     // 底部高度
     _cellHeight += 35 + WXHCommonMargin;
     return _cellHeight;
+}
+
+#pragma mark - 修改日期格式
+-(NSString *)passtime{
+
+    // 日期格式化类
+    NSDateFormatter *fmt = [[NSDateFormatter alloc] init];
+    // 设置日期格式(y:年,M:月,d:日,H:时,m:分,s:秒)
+    fmt.dateFormat = @"yyyy-MM-dd HH:mm:ss";
+    // 帖子的创建时间
+    NSDate *passTime = [fmt dateFromString:_passtime];
+    
+    if (passTime.isThisYear) { // 今年
+        if (passTime.isToday) { // 今天
+            NSDateComponents *cmps = [[NSDate date] deltaFrom:passTime];
+            
+            if (cmps.hour >= 1) { // 时间差距 >= 1小时
+                return [NSString stringWithFormat:@"%zd小时前", cmps.hour];
+            } else if (cmps.minute >= 1) { // 1小时 > 时间差距 >= 1分钟
+                return [NSString stringWithFormat:@"%zd分钟前", cmps.minute];
+            } else { // 1分钟 > 时间差距
+                return @"刚刚";
+            }
+        } else if (passTime.isYesterday) { // 昨天
+            fmt.dateFormat = @"昨天 HH:mm:ss";
+            return [fmt stringFromDate:passTime];
+        } else { // 其他
+            fmt.dateFormat = @"MM-dd HH:mm:ss";
+            return [fmt stringFromDate:passTime];
+        }
+    } else { // 非今年
+        return _passtime;
+    }
 }
 @end
