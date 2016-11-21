@@ -130,6 +130,7 @@ static CGFloat const WXHSpringFactor = 10;
             [anim setCompletionBlock:^(POPAnimation *anim, BOOL finished) {
             
                 [self dismissViewControllerAnimated:NO completion:nil];
+                
                 // 执行传进来的代码块
                 if (completionBlock) completionBlock();
             }];
